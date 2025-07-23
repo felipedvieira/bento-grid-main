@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  background-color: whitesmoke;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-smoothing: grayscale;
+}
+html {
+  height: 100%;
+}
+h1 {
+  font-weight: 400;
+  font-size: 50px;
+  margin-top: 15px;
+}
+h2 {
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -1px;
+}
+
+@media (min-width: 600px) {
+  #container {
+    height: 80%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.13fr 0.13fr 0.13fr 0.13fr;
+    grid-template-rows: 1.5fr 0.3fr 0.7fr 1fr;
+    gap: 25px;
+    padding-top: 5%;
+    grid-template-areas:
+      "um dois dois tres"
+      "um quatro cinco tres"
+      "seis quatro cinco tres"
+      "seis sete oito oito";
+  }
+  .item {
+    border-radius: 5px;
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  .um {
+    grid-area: um;
+    background-color: hsl(31, 66%, 93%);
+    color: black;
+  }
+  .dois {
+    grid-area: dois;
+    background-color: hsl(256, 67%, 59%);
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+  }
+  .tres {
+    grid-area: tres;
+    background-color: hsl(254, 88%, 90%);
+    color: black;
+  }
+  .quatro {
+    grid-area: quatro;
+    background-color: white;
+    color: black;
+  }
+
+  .cinco {
+    grid-area: cinco;
+    background-color: hsl(39, 100%, 71%);
+    color: black;
+  }
+
+  .seis {
+    grid-area: seis;
+    background-color: hsl(39, 100%, 71%);
+    color: black;
+  }
+
+  .sete {
+    grid-area: sete;
+    background-color: white;
+    color: black;
+  }
+
+  .oito {
+    grid-area: oito;
+    background-color: hsl(256, 67%, 59%);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    color: white;
+  }
+
+  .responsive_Img {
+    width: auto;
+    height: 50px;
+  }
+}
+
+/* Mobile classes */
+
+@media (max-width: 599px) {
+  #container {
+    width: 88%;
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 6%;
+    padding-left: 20px;
+    padding-bottom: 6%;
+    grid-template-areas:
+      "dois"
+      "quatro"
+      "cinco"
+      "tres"
+      "oito"
+      "sete"
+      "um"
+      "seis";
+  }
+
+  .um {
+    grid-area: um;
+    background-color: hsl(31, 66%, 93%);
+    color: black;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .dois {
+    grid-area: dois;
+    background-color: hsl(256, 67%, 59%);
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .tres {
+    grid-area: tres;
+    background-color: hsl(254, 88%, 90%);
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .quatro {
+    grid-area: quatro;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .cinco {
+    grid-area: cinco;
+    background-color: hsl(39, 100%, 71%);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 60px;
+    padding-top: 15px;
+    line-height: 25px;
+  }
+
+  .seis {
+    grid-area: seis;
+    background-color: hsl(39, 100%, 71%);
+    color: black;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .sete {
+    grid-area: sete;
+    background-color: white;
+    color: black;
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+
+  .oito {
+    grid-area: oito;
+    background-color: hsl(256, 67%, 59%);
+    text-align: center;
+    align-items: center;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .responsive_Img {
+    width: auto;
+    height: 50px;
+  }
+  .item {
+    border-radius: 5px;
+  }
+  .Stars {
+    width: 70%;
+    height: auto;
+  }
+  .Socials {
+    width: 100%;
+    height: auto;
+  }
+  .Schedule {
+    width: 18vh;
+    height: 13vh;
+    object-fit: cover;
+    object-position: top;
+    padding-top: 20px;
+  }
+  .calendarSocial {
+    width: 90%;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .heading1_text {
+    font-size: 38px;
+    line-height: 35px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+  }
+  .align_Start {
+    text-align: start;
+  }
+  .adicional_Text {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  .grow_Img {
+    width: 26vh;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .faces_Img {
+    width: 18vh;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .big_Percentage {
+    font-size: 50px;
+    font-weight: 500;
+  }
+  .create_Img {
+    width: 21vh;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .ai_Img {
+    width: 22vh;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

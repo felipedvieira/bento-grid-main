@@ -209,7 +209,7 @@ h2 {
     display: grid;
     justify-content: center;
     grid-template-columns: 0.15fr 0.15fr 0.15fr 0.15fr;
-    grid-template-rows: 1.5fr 0.3fr 0.7fr 1fr;
+    grid-template-rows: minmax(0.3fr, 1.5fr) 1.5fr 0.3fr 0.7fr 1fr;
     gap: 25px;
     padding-top: 5%;
     grid-template-areas:

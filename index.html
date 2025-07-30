@@ -1,107 +1,390 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-      rel="stylesheet" />
-    <!-- displays site properly based on user's device -->
+* {
+  margin: 0;
+  padding: 0;
+}
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Bento grid</title>
+body {
+  height: 100%;
+  background-color: whitesmoke;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-smoothing: grayscale;
+}
+html {
+  height: 100%;
+}
+h1 {
+  font-weight: 400;
+  font-size: 50px;
+  margin-top: 15px;
+}
+h2 {
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -1px;
+}
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  </head>
-  <body>
-    <div id="container">
-      <div class="item um">
-        <h2>
-          Create and schedule content
-          <span style="color: hsl(256, 67%, 59%)"><i>quicker</i></span
-          >.
-        </h2>
-        <img
-          class="create_Img"
-          src="assets\images\illustration-create-post.webp"
-          alt="Create" />
-      </div>
-      <div class="item dois">
-        <h1 class="heading1_text">
-          Social Media <span style="color: hsl(39, 100%, 71%)">10x</span>
-          <i>Faster</i> with AI
-        </h1>
-        <img
-          src="assets\images\illustration-five-stars.webp"
-          alt="5 Stars"
-          class="Stars" />
-        <p>Over 4,000 5-star reviews</p>
-      </div>
-      <div class="item tres">
-        <h2 class="heading_Tres">Schedule to social media.</h2>
-        <img
-          src="assets\images\illustration-schedule-posts.webp"
-          alt="Schedule"
-          class="calendarSocial" />
-        <p class="adicional_Text">
-          Optimize post timings to publish content at the perfect time for your
-          audience.
-        </p>
-      </div>
-      <div class="item quatro">
-        <img
-          src="assets\images\illustration-multiple-platforms.webp"
-          alt="Socials"
-          class="Socials" />
-        <h2 class="align_Start quatro_Text">
-          Manage multiple accounts and platforms.
-        </h2>
-      </div>
-      <div class="item cinco">
-        <h2>Maintain a consistent posting schedule.</h2>
-        <img
-          src="assets\images\illustration-consistent-schedule.webp"
-          alt="consistent"
-          class="Schedule" />
-      </div>
-      <div class="item seis">
-        <h2>Write your content using AI.</h2>
-        <img
-          src="assets\images\illustration-ai-content.webp"
-          alt="AI content"
-          class="ai_Img" />
-      </div>
-      <div class="item sete">
-        <h2 class="big_Percentage">>56%</h2>
-        <p>faster audience growth</p>
-        <img
-          src="assets\images\illustration-audience-growth.webp"
-          alt="Audience"
-          class="faces_Img" />
-      </div>
-      <div class="item oito">
-        <img
-          src="assets\images\illustration-grow-followers.webp"
-          alt="Grow"
-          class="grow_Img" />
-        <h2 class="oito_Textpadding">Grow followers with non-stop content.</h2>
-      </div>
-    </div>
-  </body>
-</html>
-<!--
+/* Mobile classes */
 
+@media (max-width: 804px) {
+  #container {
+    width: 88%;
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 6%;
+    padding-left: 20px;
+    padding-bottom: 6%;
+    grid-template-areas:
+      "dois"
+      "quatro"
+      "cinco"
+      "tres"
+      "oito"
+      "sete"
+      "um"
+      "seis";
+  }
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-    -->
+  .um {
+    grid-area: um;
+    background-color: hsl(31, 66%, 93%);
+    color: black;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .dois {
+    grid-area: dois;
+    background-color: hsl(256, 67%, 59%);
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .tres {
+    grid-area: tres;
+    background-color: hsl(254, 88%, 90%);
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .quatro {
+    grid-area: quatro;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .cinco {
+    grid-area: cinco;
+    background-color: hsl(39, 100%, 71%);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 60px;
+    padding-top: 15px;
+    line-height: 25px;
+  }
+
+  .seis {
+    grid-area: seis;
+    background-color: hsl(39, 100%, 71%);
+    color: black;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .sete {
+    grid-area: sete;
+    background-color: white;
+    color: black;
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+
+  .oito {
+    grid-area: oito;
+    background-color: hsl(256, 67%, 59%);
+    text-align: center;
+    align-items: center;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .item {
+    border-radius: 5px;
+  }
+  .Stars {
+    width: 70%;
+    height: auto;
+  }
+  .Socials {
+    width: 100%;
+    height: auto;
+  }
+  .Schedule {
+    width: 18vh;
+    height: 13vh;
+    object-fit: cover;
+    object-position: top;
+    padding-top: 20px;
+  }
+  .calendarSocial {
+    width: 90%;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .heading1_text {
+    font-size: 38px;
+    line-height: 35px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+  }
+  .align_Start {
+    text-align: start;
+  }
+  .adicional_Text {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  .grow_Img {
+    width: 26vh;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .faces_Img {
+    width: 18vh;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .big_Percentage {
+    font-size: 50px;
+    font-weight: 500;
+  }
+  .create_Img {
+    width: 21vh;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .ai_Img {
+    width: 22vh;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/* Desktop media query*/
+@media (min-width: 805px) {
+  #container {
+    height: 80%;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0.15fr 0.15fr 0.15fr 0.15fr;
+    grid-template-rows: 1.5fr 0.3fr 0.7fr 1fr;
+    gap: 25px;
+    padding-top: 5%;
+    grid-template-areas:
+      "um dois dois tres"
+      "um quatro cinco tres"
+      "seis quatro cinco tres"
+      "seis sete oito oito";
+  }
+  .item {
+    border-radius: 5px;
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  .um {
+    grid-area: um;
+    background-color: hsl(31, 66%, 93%);
+    color: black;
+    font-size: 22px;
+    line-height: 30px;
+    padding-top: 60px;
+    padding-left: 15px;
+  }
+  .create_Img {
+    width: 20vh;
+    height: auto;
+    padding-top: 20px;
+  }
+  .dois {
+    grid-area: dois;
+    background-color: hsl(256, 67%, 59%);
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+  }
+  .Stars {
+    width: 50%;
+    height: auto;
+  }
+  .heading1_text {
+    font-size: 42px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+  }
+  .tres {
+    display: flex;
+    flex-direction: column;
+    grid-area: tres;
+    background-color: hsl(254, 88%, 90%);
+    color: black;
+    padding-top: 40px;
+  }
+  .heading_Tres {
+    padding-right: 20px;
+    padding-left: 30px;
+    line-height: 20px;
+  }
+  .calendarSocial {
+    align-self: self-end;
+    width: 20.5vh;
+    height: 30vh;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    object-fit: cover;
+    object-position: left;
+  }
+  .adicional_Text {
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    line-height: 16px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .quatro {
+    display: flex;
+    flex-direction: column;
+    grid-area: quatro;
+    background-color: white;
+    color: black;
+  }
+  .Socials {
+    align-self: self-end;
+    width: 20.7vh;
+    height: 6vh;
+    object-fit: cover;
+    object-position: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .quatro_Text {
+    padding-left: 20px;
+    line-height: 25px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+
+  .cinco {
+    display: flex;
+    flex-direction: column;
+    grid-area: cinco;
+    background-color: hsl(39, 100%, 71%);
+    color: black;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-top: 20px;
+    line-height: 22px;
+    padding-right: 25px;
+  }
+  .Schedule {
+    width: 18vh;
+    height: 8vh;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .seis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-area: seis;
+    background-color: hsl(39, 100%, 71%);
+    color: black;
+    padding-left: 20px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .ai_Img {
+    width: 21vh;
+    height: auto;
+  }
+
+  .sete {
+    grid-area: sete;
+    background-color: white;
+    color: black;
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+  .big_Percentage {
+    font-size: 50px;
+    font-weight: 500;
+  }
+  .faces_Img {
+    padding-top: 20px;
+    width: 18vh;
+    height: auto;
+  }
+  .oito {
+    grid-area: oito;
+    background-color: hsl(256, 67%, 59%);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: left;
+  }
+  .oito_Textpadding {
+    padding-left: 15px;
+  }
+  .grow_Img {
+    width: 20vh;
+    height: auto;
+    padding-left: 15px;
+  }
+}

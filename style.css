@@ -206,10 +206,12 @@ h2 {
   #container {
     height: 80%;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
     justify-content: center;
-    grid-template-columns: 0.15fr 0.15fr 0.15fr 0.15fr;
-    grid-template-rows: minmax(0.3fr, 1.5fr) 1.5fr 0.3fr 0.7fr 1fr;
+    grid-template-columns: 0.15fr 0.15fr 0.15fr 0.26fr;
+    grid-template-rows: 1.5fr 0.3fr 0.7fr 1fr;
     gap: 25px;
     padding-top: 5%;
     grid-template-areas:
@@ -233,8 +235,8 @@ h2 {
     grid-area: um;
     background-color: hsl(31, 66%, 93%);
     color: black;
-    font-size: 22px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 24px;
     padding-top: 60px;
     padding-left: 15px;
   }
